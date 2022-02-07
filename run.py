@@ -47,7 +47,7 @@ class player():
     def get_player_name():
         """
         Get player to enter their chosen name. Letters
-        and numbers are valid, with max length of 8 
+        and numbers are valid, with max length of 8
         characters. The request will only ends when a valid
         input is received.
         """
@@ -60,12 +60,11 @@ class player():
             player_name = input("Please enter your name: ")
 
             if self.check_player_name(player_name):
-                break                
+                break
                 print("\n")
                 print(f"Hi {player_name}, let's begin the quiz!!\n")
-    
-        return player_name.strip()
 
+        return player_name.strip()
 
     def check_player_name(self, player_name_str):
         """
@@ -84,11 +83,5 @@ class player():
 
         return True
 
-
-
-
-
 invite_to_play()
 player()
-
-
