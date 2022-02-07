@@ -1,7 +1,7 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
-from quiz import quiz
+
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -36,18 +36,59 @@ def invite_to_play():
             print("Invalid input! Please enter 'Y' or 'N'!\n")
 
 
-def get_player_name():
+class player():
     """
-    Get player to enter their name
+    Create a player object according to player's input
     """
-    print("Next please enter your name! It should be madeup by two letters.")
-    print("For example: mk, js, sm\n")
 
-    player_name = input("Please enter your name: ").strip()  # need to validate name
-    print(f"Hi {player_name}, let's begin the quiz!!\n")
+    def _init_(self):
+        self.player_name = self.get_player_name()
+
+    def get_player_name():
+        """
+        Get player to enter their chosen name. Letters
+        and numbers are valid, with max length of 8 
+        characters. The request will only ends when a valid
+        input is received.
+        """
+        while True:
+            print("Next please enter your name!\n")
+            print("Characters A-Z, a-z, and 0-9 are permitted.")
+            print("Maximum of 8 characters.")
+            print("Any white space will be removed.\n")
+
+            player_name = input("Please enter your name: ")
+
+            if self.check_player_name(player_name):
+                break                
+                print("\n")
+                print(f"Hi {player_name}, let's begin the quiz!!\n")
+    
+        return player_name.strip()
+
+
+    def check_player_name(self, player_name_str):
+        """
+        Validate user's input if the username is valid
+        """
+        self.player_name_str = str
+        try:
+            if not player_name_str:
+                raise ValueError("Please enter a player name")
+            if len(player_name_str) > 8:
+                raise ValueError("Player name too long")
+
+        except ValueError as e:
+                print(f"Invalid data: {e}, please try again.\n")
+                return False
+
+        return True
+
+
+
 
 
 invite_to_play()
-get_player_name()
-play_quiz()
+player()
+
 
