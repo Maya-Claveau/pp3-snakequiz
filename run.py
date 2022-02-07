@@ -23,7 +23,7 @@ def invite_to_play():
     print("Welcome to Snakequiz!!!\n")
     while True:
         print("Enter Y for Yes, and N for No.")
-        play_option = input("Would you like to play? ")
+        play_option = input("Would you like to play? ").strip()
 
         if play_option.upper() == "N":
             print("GG. See you next time!")
@@ -42,7 +42,7 @@ def get_player_name():
     print("Next please enter your name! It should be madeup by two letters.")
     print("For example: mk, js, sm\n")
 
-    player_name = input("Please enter your name: ")  # need to validate name
+    player_name = input("Please enter your name: ").strip()  # need to validate name
     print(f"Hi {player_name}, let's begin the quiz!!\n")
 
 
@@ -56,22 +56,26 @@ def play_quiz():
 
     score = 0
 
-    # question 1
-    answered = False
-    while (not answered):
-        answer1 = input("How many hearts does a snake have? \nA. two \nB. three \nC. one \nAnswer: ")
-        if answer1.upper() == "B" or answer1.upper() == "THREE" or answer1 == "3":
-            print("Correct!\n")
-            score += 1
-            break
-        elif answer1.upper() == "A" or answer1.upper() == "C":
-            print("Incorrect!\n")
-            break
-        else:
-            print("Invalid input!! Please choose between 'A' 'B' or 'C'\n")
+# question 1
+answered = False
+while (not answered):
+    answer1 = input(
+        "How many hearts does a snake have?\nA. 2 \nB. 3 \nC. 1\nAnswer: "
+        ).strip()
+    if answer1.upper() == "B" or answer1.upper() == "THREE" or answer1 == "3":
+        print("Correct!\n")
+        score += 1
+        break
+    elif answer1.upper() == "A" or answer1.upper() == "C":
+        print("Incorrect!\n")
+        break
+    else:
+        print("Invalid input!! Please choose between 'A' 'B' or 'C'\n")
 
     print("Interesting facts: ")
-    print("Snakes and other reptiles have a three-chambered heart that controls\nthe circulatory system via the left and right atrium, and one ventricle.\n")
+    print("Snakes and other reptiles have a three-chambered heart that ")
+    print("controls the circulatory system via the left and right atrium,")
+    print(" and one ventricle.\n")
 
     # question 2
     answer = input("Do snakes have bones? Y/N ")
