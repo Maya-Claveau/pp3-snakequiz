@@ -21,18 +21,17 @@ def invite_to_play():
     """
     print("Welcome to Snakequiz!!!\n")
     
-    while True:
-       
+    while True:       
         play_option = input("Would you like to play? Y for Yes, and N for No. ")
 
-        print("Invalid input! Please enter 'Y' or 'N'!\n")
-
-        if play_option.upper() == "N":
+        if play_option.upper() == "N":                     
             print("GG. See you next time!")
-            quit()
+            quit()           
         elif play_option.upper() == "Y":
             print("Great!\n")
             break
+        else:
+            print("Invalid input! Please enter 'Y' or 'N'!\n")
     
 
 def get_player_name():
@@ -40,16 +39,18 @@ def get_player_name():
     Get player to enter their name
     """
     print("Next please enter your name! It should be madeup by two letters.")
-    print("For example: mk, js, sm, etc\n")
+    print("For example: mk, js, sm\n")
 
-    player_name = input("Please enter your name: ")
+    player_name = input("Please enter your name: ") #need to validate name
     print(f"Hi {player_name}, let's begin the quiz!!\n")
 
 
 def play_quiz():
     """
     all the quiz of the game, if the player get it right, the score
-    will be increased by 1
+    will be increased by 1. There is one interesting fact displayed
+    after each question, regardless of the player's answer for educational
+    purposes.
     """
 
     score = 0
