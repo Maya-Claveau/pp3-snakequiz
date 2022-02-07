@@ -21,12 +21,19 @@ def invite_to_play():
     """
     print("Welcome to Snakequiz!!!\n")
     
-    play_option = input("Would you like to play? Y for Yes, and N for No. ")
-    if play_option.upper() != "Y":
-        print("GG. See you next time!")
-        quit()
-    print("Great!\n")
+    while True:
+       
+        play_option = input("Would you like to play? Y for Yes, and N for No. ")
 
+        print("Invalid input! Please enter 'Y' or 'N'!\n")
+
+        if play_option.upper() == "N":
+            print("GG. See you next time!")
+            quit()
+        elif play_option.upper() == "Y":
+            print("Great!\n")
+            break
+    
 
 def get_player_name():
     """
@@ -48,7 +55,7 @@ def play_quiz():
     score = 0
 
     # question 1
-    answered=False
+    answered = False
     while (not answered):
         answer1 = input("How many hearts does a snake have? \nA. two \nB. three \nC. one \nAnswer: ")
         if answer1.upper() == "B" or answer1.upper() == "THREE" or answer1 == "3":
