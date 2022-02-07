@@ -15,24 +15,25 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('pp3-snakequiz')
 
+
 def invite_to_play():
     """
     Give player the option to play or end the game
     """
     print("Welcome to Snakequiz!!!\n")
-    
-    while True:       
-        play_option = input("Would you like to play? Y for Yes, and N for No. ")
+    while True:
+        print("Enter Y for Yes, and N for No.")
+        play_option = input("Would you like to play? ")
 
-        if play_option.upper() == "N":                     
+        if play_option.upper() == "N":
             print("GG. See you next time!")
-            quit()           
+            quit()
         elif play_option.upper() == "Y":
             print("Great!\n")
             break
         else:
             print("Invalid input! Please enter 'Y' or 'N'!\n")
-    
+
 
 def get_player_name():
     """
@@ -41,7 +42,7 @@ def get_player_name():
     print("Next please enter your name! It should be madeup by two letters.")
     print("For example: mk, js, sm\n")
 
-    player_name = input("Please enter your name: ") #need to validate name
+    player_name = input("Please enter your name: ")  # need to validate name
     print(f"Hi {player_name}, let's begin the quiz!!\n")
 
 
@@ -63,12 +64,12 @@ def play_quiz():
             print("Correct!\n")
             score += 1
             break
-        elif answer1.upper() =="A" or answer1.upper() == "C":
+        elif answer1.upper() == "A" or answer1.upper() == "C":
             print("Incorrect!\n")
             break
         else:
             print("Invalid input!! Please choose between 'A' 'B' or 'C'\n")
-        
+
     print("Interesting facts: ")
     print("Snakes and other reptiles have a three-chambered heart that controls\nthe circulatory system via the left and right atrium, and one ventricle.\n")
 
@@ -80,7 +81,7 @@ def play_quiz():
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("As snakes are so flexible, it may be tempting to think that snakes have no bones. However, snakes do indeed have bones. In fact, they have hundreds, even more than us humans.\n") 
+    print("As snakes are so flexible, it may be tempting to think that snakes have no bones. However, snakes do indeed have bones. In fact, they have hundreds, even more than us humans.\n")
 
     # question 3
     answer = input("Do all snakes lay eggs? Y/N ")
@@ -160,7 +161,7 @@ def play_quiz():
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("The longest species of venomous snake is the king cobra or hamadryad Ophiophagus hannah. Native to India and southeast Asia, it averages 3-4m in length, but according to the Guinness World Record, one King Cobra that was captured in April 1937 near Port Dickson in Negeri Sembilan, Malaysia, had attained a length of 5.71m by autumn 1939.\n") 
+    print("The longest species of venomous snake is the king cobra or hamadryad Ophiophagus hannah. Native to India and southeast Asia, it averages 3-4m in length, but according to the Guinness World Record, one King Cobra that was captured in April 1937 near Port Dickson in Negeri Sembilan, Malaysia, had attained a length of 5.71m by autumn 1939.\n")
 
     # final message with score
     print("You got " + str((score / 10) * 100) + "% correct!\n")
