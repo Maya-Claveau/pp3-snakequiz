@@ -1,3 +1,5 @@
+# this is the quiz part of the game, with score and final message at the bottom
+
 
 def play_quiz():
     """
@@ -12,10 +14,9 @@ def play_quiz():
     # question 1
     answered = False
     while (not answered):
-        answer1 = input(
-            "How many hearts does a snake have?\nA. 2 \nB. 3 \nC. 1\nAnswer: "
-            ).strip()
-        if answer1.upper() == "B" or answer1.upper() == "THREE" or answer1 == "3":
+        print("How many hearts does a snake have?")
+        answer1 = input("A. 2 \nB. 3 \nC. 1\nAnswer: ").strip()
+        if answer1.upper() == "B" or answer1.upper() == "THREE" or answer1 == "3":  # need to make it shorter
             print("Correct!\n")
             score += 1
             break
@@ -31,94 +32,133 @@ def play_quiz():
     print("and one ventricle.\n")
 
     # question 2
-    answer = input("Do snakes have bones? Y/N ").strip()
-    if answer.upper() == "Y":
+    answer2 = input("Do snakes have bones? Y/N ").strip()
+    if answer2.upper() == "Y":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("As snakes are so flexible, it may be tempting to think that snakes have no bones. However, snakes do indeed have bones. In fact, they have hundreds, even more than us humans.\n")
+    print("As snakes are so flexible, it may be tempting to think that snakes")
+    print("have no bones. However, snakes do indeed have bones. In fact, they")
+    print("have hundreds, even more than us humans.\n")
 
     # question 3
-    answer = input("Do all snakes lay eggs? Y/N ")
-    if answer.upper() == "N":
+    answer3 = input("Do all snakes lay eggs? Y/N ").strip()
+    if answer3.upper() == "N":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("Most snakes lay eggs, but some species—like sea snakes—give live birth to young.\n")
+    print("Most snakes lay eggs, but some species - like sea snakes — give")
+    print("live birth to young.\n")
 
     # question 4
-    answer = input("How many species of Snakes there are? A 600; B 1500; C >3000 ")
-    if answer.upper() == "C":
+    print("How many species of Snakes there are?")
+    answer4 = input("A 600 \nB 1500 \nC 3000+ \nAnswer: ").strip()
+    if answer4.upper() == "C":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("There are more than 3,000 species of snakes on the planet and they are found everywhere except in Antarctica, Iceland, Ireland, Greenland, and New Zealand.\n")
+    print("There are more than 3,000 species of snakes on the planet and they")
+    print("are found everywhere except in Antarctica, Iceland, Ireland,")
+    print("Greenland, and New Zealand.\n")
 
     # question 5
-    answer = input("Out of 3000 + species, how many are venomous? A 600; B 1500; C 3000+ ")
-    if answer.upper() == "A":
+    print("Out of 3000 + species, how many are venomous?")
+    answer5 = input("A 600 \nB 1500 \nC 3000+ \nAnswer: ").strip()
+    if answer5.upper() == "A":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("According to the World Health Organization (WHO), out of 600 + venomous species, over 200 are considered to be medically important.\n")
+    print("According to the World Health Organization (WHO), out of 600 +")
+    print("venomous species, over 200 are considered to be medically")
+    print("important.\n")
 
     # question 6
-    answer = input("Are sea snakes venomous? Y/N ")
-    if answer.upper() == "Y":
+    answer6 = input("Are sea snakes venomous? Y/N ").strip()
+    if answer6.upper() == "Y":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Did you know that ")
-    print("Sea snakes are some of the most venomous snakes that exist, but they pose little threat to humans because they are shy, gentle, and their fangs are too short to do much damage.\n")
+    print("Sea snakes are some of the most venomous snakes that exist,")
+    print("but they pose little threat to humans because they are shy,")
+    print("gentle, and their fangs are too short to do much damage.\n")
 
     # question 7
-    answer = input("Why do snakes poke out their tongue? A too hot; B too cold; C sense direction ")
-    if answer.upper() == "C":
+    print("Why do snakes poke out their tongue?")
+    answer7 = input(
+        "A too hot \nB too cold \nC sense direction \nAnswer: "
+        ).strip()
+    if answer7.upper() == "C":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("They use their tongues to smell the air, which helps them navigate. This is called chemoreception, which literally means the receiving (reception) of chemicals (chemo). Airborne chemicals stick to the snake its tongue when it is poking out, and the snake can identify the particles thanks to a special organ called the vomeronasal (or Jacobson's) organ.\n")
+    print("They use their tongues to smell the air, which helps them")
+    print("navigate. This is called chemoreception, which literally means")
+    print("the receiving (reception) of chemicals (chemo). Airborne")
+    print("chemicals stick to the snake its tongue when it is poking out,")
+    print("and the snake can identify the particles thanks to a special organ")
+    print("called the vomeronasal (or Jacobson's) organ.\n")
 
     # question 8
-    answer = input("Where is the vomeronasal (or Jacobson’s) organ located? A in its mouth; B in its chest; C in its tail ")
-    if answer.upper() == "A":
+    print("Where is the vomeronasal (or Jacobson’s) organ located?")
+    answer8 = input(
+        "A in its mouth \nB in its chest \nC in its tail \nAnswer: "
+        ).strip()
+    if answer8.upper() == "A":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("The vomeronasal organ is located in the roof of a snake’s mouth, and there are two small entry holes that lead to it – like nostrils, but on the inside of the mouth.\n")
+    print("The vomeronasal organ is located in the roof of a snake’s mouth,")
+    print("and there are two small entry holes that lead to it – like")
+    print("nostrils, but on the inside of the mouth.\n")
 
     # question 9
-    answer = input("Which snake with the world’s deadliest venom? A king cobra; B python; C inland taipan ")
-    if answer.upper() == "C":
+    print("Which snake with the world’s deadliest venom?")
+    answer9 = input(
+        "A king cobra \nB python \nC inland taipan \nAnswer: "
+        ).strip()
+    if answer9.upper() == "C":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("The bite of an inland or western taipan delivers a veritable witch’s brew of toxins. The venom consists of taipoxin, a complex mix of neurotoxins, procoagulants, and myotoxins that paralyze muscles, inhibit breathing, cause hemorrhaging in blood vessels and tissues, and damage muscles.\n")
+    print("The bite of an inland or western taipan delivers a veritable")
+    print("witch’s brew of toxins. The venom consists of taipoxin, a")
+    print("complex mix of neurotoxins, procoagulants, and myotoxins that")
+    print("paralyze muscles, inhibit breathing, cause hemorrhaging in blood")
+    print("vessels and tissues, and damage muscles.\n")
 
     # question 10
-    answer = input("What is the longest venomous snake in the world? A king cobra; B python; C inland taipan ")
-    if answer.upper() == "A":
+    print("What is the longest venomous snake in the world?")
+    answer10 = input(
+        "A king cobra \nB python \nC inland taipan \nAnswer: "
+        ).strip()
+    if answer10.upper() == "A":
         print("Correct!\n")
         score += 1
     else:
         print("Incorrect!\n")
     print("Interesting facts: ")
-    print("The longest species of venomous snake is the king cobra or hamadryad Ophiophagus hannah. Native to India and southeast Asia, it averages 3-4m in length, but according to the Guinness World Record, one King Cobra that was captured in April 1937 near Port Dickson in Negeri Sembilan, Malaysia, had attained a length of 5.71m by autumn 1939.\n")
+    print("The longest species of venomous snake is the king cobra or")
+    print("hamadryad Ophiophagus hannah. Native to India and southeast")
+    print("Asia, it averages 3-4m in length, but according to the")
+    print("Guinness World Record, one King Cobra that was captured in")
+    print("April 1937 near Port Dickson in Negeri Sembilan, Malaysia,")
+    print("had attained a length of 5.71m by autumn 1939.\n")
 
 
 # final message with score
@@ -133,4 +173,3 @@ def final_message(score):
         print("You did great!")
     else:
         print("You did awesome job!")
-

@@ -102,3 +102,5 @@ def check_player_name(player_name):
 
 game_menu()
 get_player_name()
+# score = quiz.play_quiz()
+# quiz.final_message(score)
