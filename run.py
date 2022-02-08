@@ -45,7 +45,8 @@ def game_menu():
             quit()
         elif game_choice == "3":
             print("How nice you want to play again!\n")
-            break
+            restart_game()
+            # break
         elif game_choice == "4":
             print("Here are the top 10 players!")
             # need add code to get data from Gsheet, and display option 1 and 2
@@ -99,6 +100,12 @@ def check_player_name(player_name):
 
     return True
 
+
+def restart_game():
+    """
+    allow player to play the game multiple times
+    """
+    quiz.play_quiz()
 
 game_menu()
 get_player_name()
