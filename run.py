@@ -30,8 +30,9 @@ def game_menu():
     Give player 5 different options to choose from: play, quit,
     restart, score board or my last 4 scores
     """
-    print("Press choose from below options")
-    print("1. Play; 2. Quit; 3. Restart; 4. Score board; 5. My last 4 scores")
+    print("Press 1 - 5 to choose from below options:")
+    print("1. Play \n2. Quit \n3. Restart \n4. Score board")
+    print("5. My last 4 scores")
 
     while True:
         game_choice = input("What would you like to do? ").strip()
@@ -58,8 +59,8 @@ def game_menu():
 
 def get_player_name():
     """
-    Get player to enter their chosen name. The request will only ends when a valid
-    input is received.
+    Get player to enter their chosen name. The request will only ends
+    when a valid input is received.
     """
     while True:
         print("Next choose a user name!\n")
@@ -73,7 +74,7 @@ def get_player_name():
             print("\n")
             print(f"Hi {player_name}, let's begin the quiz!!\n")
             quiz.play_quiz()
-            break
+            game_menu()
 
     check_player_name(player_name)
     return player_name.strip()
@@ -119,6 +120,3 @@ def update_score_worksheet(data):
 
 game_menu()
 get_player_name()
-update_score_worksheet(player_name)
-# score = quiz.play_quiz()
-# quiz.final_message(score)

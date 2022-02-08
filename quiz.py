@@ -160,16 +160,13 @@ def play_quiz():
     print("April 1937 near Port Dickson in Negeri Sembilan, Malaysia,")
     print("had attained a length of 5.71m by autumn 1939.\n")
 
+    # final message with score
+    # Display the final score in % to the player
 
-# final message with score
-def final_message(score):
-    """
-    Display the final score in % to the player.
-    """
     print("You got " + str((score / 10) * 100) + "% correct!\n")
-    if score < 4:
-        print("You could do better, try again!")
-    elif score >= 4 < 7:
-        print("You did great!")
+    if score <= 4:
+        print("You could do better, try again!\n")
+    elif score > 4 < 7:
+        print("You did great!\n")
     else:
-        print("You did awesome job!")
+        print("You did awesome job!\n")
