@@ -89,9 +89,12 @@ def check_player_name(player_name):
         if not player_name:
             raise ValueError("Please enter a player name!")
         if len(player_name) > 8:
-            raise ValueError("Player name too long!")
+            raise ValueError("Player name too long")
+        if not player_name.isalnum():
+            raise ValueError("Only letters and digits are permitted")
+
     except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+        print(f"Invalid data: {e}! Please try again.\n")
         return False
 
     return True
