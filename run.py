@@ -46,7 +46,6 @@ def game_menu():
         elif game_choice == "3":
             print("How nice you want to play again!\n")
             restart_game()
-            # break
         elif game_choice == "4":
             print("Here are the top 10 players!")
             # need add code to get data from Gsheet, and display option 1 and 2
@@ -59,9 +58,7 @@ def game_menu():
 
 def get_player_name():
     """
-    Get player to enter their chosen name. Letters
-    and numbers are valid, with max length of 8
-    characters. The request will only ends when a valid
+    Get player to enter their chosen name. The request will only ends when a valid
     input is received.
     """
     while True:
@@ -84,7 +81,10 @@ def get_player_name():
 
 def check_player_name(player_name):
     """
-    Validate user's input if the username is valid
+    Validate user's input if the username provided is valid.
+    It will raise ValueError if the lengh is more than 8 character,
+    or no name was entered, or anything other than letters and
+    numbers were used.
     """
     try:
         if not player_name:
@@ -93,7 +93,6 @@ def check_player_name(player_name):
             raise ValueError("Player name too long")
         if not player_name.isalnum():
             raise ValueError("Only letters and digits are permitted")
-
     except ValueError as e:
         print(f"Invalid data: {e}! Please try again.\n")
         return False
@@ -107,7 +106,19 @@ def restart_game():
     """
     quiz.play_quiz()
 
+
+def update_score_worksheet(data):
+    """
+    update score of each player by add new data
+    """
+    print("Updating the score...\n")
+    score_worksheet = SHEET.worksheet("score")
+    score_worksheet.append_row(data)
+    print("Score updated successfully.\n")
+
+
 game_menu()
 get_player_name()
+update_score_worksheet(player_name)
 # score = quiz.play_quiz()
 # quiz.final_message(score)
