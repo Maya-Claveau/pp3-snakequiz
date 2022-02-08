@@ -24,7 +24,6 @@ def play_quiz():
             break
         else:
             print("Invalid input!! Please choose between 'A' 'B' or 'C'\n")
-        
 
     print("Interesting facts: ")
     print("Snakes and other reptiles have a three-chambered heart that ")
@@ -121,7 +120,8 @@ def play_quiz():
     print("Interesting facts: ")
     print("The longest species of venomous snake is the king cobra or hamadryad Ophiophagus hannah. Native to India and southeast Asia, it averages 3-4m in length, but according to the Guinness World Record, one King Cobra that was captured in April 1937 near Port Dickson in Negeri Sembilan, Malaysia, had attained a length of 5.71m by autumn 1939.\n")
 
-    # final message with score
+
+# final message with score
 def final_message(score):
     """
     Display the final score in % to the player.

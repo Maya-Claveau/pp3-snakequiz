@@ -4,6 +4,8 @@
 
 import gspread
 from google.oauth2.service_account import Credentials
+import quiz
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -17,71 +19,83 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('pp3-snakequiz')
 
 
-def invite_to_play():
-    """
-    Give player the option to play or end the game
-    """
-    print("Welcome to Snakequiz!!!\n")
-    while True:
-        print("Enter Y for Yes, and N for No.")
-        play_option = input("Would you like to play? ").strip()
+# Welcome message
+print("Welcome to Snakequiz!!!\n")
+print("Test your snake knowledge with this 10 questions quiz.")
+print("To start play, just enter your name and let's roll.\n")
 
-        if play_option.upper() == "N":
-            print("GG. See you next time!")
-            quit()
-        elif play_option.upper() == "Y":
+
+def game_menu():
+    """
+    Give player 5 different options to choose from: play, quit,
+    restart, score board or my last 4 scores
+    """
+    print("Press choose from below options")
+    print("1. Play; 2. Quit; 3. Restart; 4. Score board; 5. My last 4 scores")
+
+    while True:
+        game_choice = input("What would you like to do? ").strip()
+        print("\n")
+
+        if game_choice == "1":
             print("Great!\n")
             break
+        elif game_choice == "2":
+            print("GG. See you next time!")
+            quit()
+        elif game_choice == "3":
+            print("How nice you want to play again!\n")
+            break
+        elif game_choice == "4":
+            print("Here are the top 10 players!")
+            # need add code to get data from Gsheet, and display option 1 and 2
+        elif game_choice == "5":
+            print("Here are your last 4 scores!")
+            # need code to get data from Gsheet, about player's scores
         else:
-            print("Invalid input! Please enter 'Y' or 'N'!\n")
+            print("Invalid input, please choose between 1 - 5")
 
 
-class player():
+def get_player_name():
     """
-    Create a player object according to player's input
+    Get player to enter their chosen name. Letters
+    and numbers are valid, with max length of 8
+    characters. The request will only ends when a valid
+    input is received.
     """
+    while True:
+        print("Next choose a user name!\n")
+        print("Characters A-Z, a-z, and 0-9 are permitted.")
+        print("Maximum of 8 characters.")
+        print("Any white space will be removed.\n")
 
-    def _init_(self):
-        self.player_name = self.get_player_name()
+        player_name = input("Please enter your name: ")
 
-    def get_player_name():
-        """
-        Get player to enter their chosen name. Letters
-        and numbers are valid, with max length of 8
-        characters. The request will only ends when a valid
-        input is received.
-        """
-        while True:
-            print("Next please enter your name!\n")
-            print("Characters A-Z, a-z, and 0-9 are permitted.")
-            print("Maximum of 8 characters.")
-            print("Any white space will be removed.\n")
+        if check_player_name(player_name):
+            print("\n")
+            print(f"Hi {player_name}, let's begin the quiz!!\n")
+            quiz.play_quiz()
+            break
 
-            player_name = input("Please enter your name: ")
+    check_player_name(player_name)
+    return player_name.strip()
 
-            if self.check_player_name(player_name):
-                break
-                print("\n")
-                print(f"Hi {player_name}, let's begin the quiz!!\n")
 
-        return player_name.strip()
+def check_player_name(player_name):
+    """
+    Validate user's input if the username is valid
+    """
+    try:
+        if not player_name:
+            raise ValueError("Please enter a player name!")
+        if len(player_name) > 8:
+            raise ValueError("Player name too long!")
+    except ValueError as e:
+        print(f"Invalid data: {e}, please try again.\n")
+        return False
 
-    def check_player_name(self, player_name_str):
-        """
-        Validate user's input if the username is valid
-        """
-        self.player_name_str = str
-        try:
-            if not player_name_str:
-                raise ValueError("Please enter a player name")
-            if len(player_name_str) > 8:
-                raise ValueError("Player name too long")
+    return True
 
-        except ValueError as e:
-                print(f"Invalid data: {e}, please try again.\n")
-                return False
 
-        return True
-
-invite_to_play()
-player()
+game_menu()
+get_player_name()
