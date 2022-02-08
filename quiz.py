@@ -38,6 +38,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("As snakes are so flexible, it may be tempting to think that snakes")
     print("have no bones. However, snakes do indeed have bones. In fact, they")
@@ -50,6 +51,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("Most snakes lay eggs, but some species - like sea snakes — give")
     print("live birth to young.\n")
@@ -62,6 +64,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("There are more than 3,000 species of snakes on the planet and they")
     print("are found everywhere except in Antarctica, Iceland, Ireland,")
@@ -75,6 +78,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("According to the World Health Organization (WHO), out of 600 +")
     print("venomous species, over 200 are considered to be medically")
@@ -87,6 +91,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Did you know that ")
     print("Sea snakes are some of the most venomous snakes that exist,")
     print("but they pose little threat to humans because they are shy,")
@@ -102,6 +107,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("They use their tongues to smell the air, which helps them")
     print("navigate. This is called chemoreception, which literally means")
@@ -120,6 +126,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("The vomeronasal organ is located in the roof of a snake’s mouth,")
     print("and there are two small entry holes that lead to it – like")
@@ -135,6 +142,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("The bite of an inland or western taipan delivers a veritable")
     print("witch’s brew of toxins. The venom consists of taipoxin, a")
@@ -152,6 +160,7 @@ def play_quiz():
         score += 1
     else:
         print("Incorrect!\n")
+
     print("Interesting facts: ")
     print("The longest species of venomous snake is the king cobra or")
     print("hamadryad Ophiophagus hannah. Native to India and southeast")
