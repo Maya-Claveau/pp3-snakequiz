@@ -5,6 +5,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import quiz
+from datetime import datetime
 
 
 SCOPE = [
@@ -114,7 +115,14 @@ def update_score_worksheet(player_name, data):
     score_worksheet = SHEET.worksheet("score_list")
     # print(data)
     # print("this is from update function")
-    score_worksheet.append_row([player_name, data])
+    # datetime object containing current date and time
+    
+    now = datetime.now()
+
+    # dd/mm/YY H:M:S
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+    score_worksheet.append_row([player_name, data, dt_string])
     print("Score updated successfully.\n")
 
 
@@ -123,7 +131,8 @@ def restart_game():
     allow player to play the game multiple times
     """
     # quiz.play_quiz()
-    data = quiz.play_quiz()
+    # data = quiz.play_quiz()
+    data = 0
     update_score_worksheet(data)
     game_menu()
 
