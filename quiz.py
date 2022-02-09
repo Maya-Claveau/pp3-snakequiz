@@ -171,7 +171,7 @@ def play_quiz():
     # final message with score
     # Display the final score in % to the player
 
-    print("You got " + str((score / 10) * 100) + "% correct!\n")
+    print("You got " + str(score) + " out of 10 correct!\n")
     if score <= 4:
         print("You could do better, try again!\n")
         return score

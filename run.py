@@ -121,7 +121,7 @@ def update_score_worksheet(data, player_name):
     print(data)
     print("this is from update function")    
     print("until here is working")
-    score_worksheet.append_row([data])
+    score_worksheet.append_row([player_name, data])
     print("Score updated successfully.\n")
 
 
@@ -134,3 +134,6 @@ def main():
 
 
 main()
+data = quiz.play_quiz()
+score = [int(num) for num in data]
+update_sales_worksheet(score)
