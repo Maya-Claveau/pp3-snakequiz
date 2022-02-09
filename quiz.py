@@ -9,12 +9,12 @@ def play_quiz():
     purposes.
     """
     score = 0
-    
+
     # question 1
     answered = False
     while (not answered):
         print("How many hearts does a snake have?")
-        answer1 = input("A. 2 \nB. 3 \nC. 1\nAnswer: ").strip()
+        answer1 = input("A. 2 \nB. 3 \nC. 1\nAnswer: \n").strip()
         if answer1.upper() == "B" or answer1.upper() == "THREE" or answer1 == "3":  # need to make it shorter
             print("Correct!\n")
             score += 1
@@ -31,7 +31,7 @@ def play_quiz():
     print("and one ventricle.\n")
 
     # question 2
-    answer2 = input("Do snakes have bones? Y/N ").strip()
+    answer2 = input("Do snakes have bones? Y/N \n").strip()
     if answer2.upper() == "Y":
         print("Correct!\n")
         score += 1
@@ -44,7 +44,7 @@ def play_quiz():
     print("have hundreds, even more than us humans.\n")
 
     # question 3
-    answer3 = input("Do all snakes lay eggs? Y/N ").strip()
+    answer3 = input("Do all snakes lay eggs? Y/N \n").strip()
     if answer3.upper() == "N":
         print("Correct!\n")
         score += 1
@@ -57,7 +57,7 @@ def play_quiz():
 
     # question 4
     print("How many species of Snakes there are?")
-    answer4 = input("A 600 \nB 1500 \nC 3000+ \nAnswer: ").strip()
+    answer4 = input("A 600 \nB 1500 \nC 3000+ \nAnswer: \n").strip()
     if answer4.upper() == "C":
         print("Correct!\n")
         score += 1
@@ -71,7 +71,7 @@ def play_quiz():
 
     # question 5
     print("Out of 3000 + species, how many are venomous?")
-    answer5 = input("A 600 \nB 1500 \nC 3000+ \nAnswer: ").strip()
+    answer5 = input("A 600 \nB 1500 \nC 3000+ \nAnswer: \n").strip()
     if answer5.upper() == "A":
         print("Correct!\n")
         score += 1
@@ -84,7 +84,7 @@ def play_quiz():
     print("important.\n")
 
     # question 6
-    answer6 = input("Are sea snakes venomous? Y/N ").strip()
+    answer6 = input("Are sea snakes venomous? Y/N \n").strip()
     if answer6.upper() == "Y":
         print("Correct!\n")
         score += 1
@@ -99,7 +99,7 @@ def play_quiz():
     # question 7
     print("Why do snakes poke out their tongue?")
     answer7 = input(
-        "A too hot \nB too cold \nC sense direction \nAnswer: "
+        "A too hot \nB too cold \nC sense direction \nAnswer: \n"
         ).strip()
     if answer7.upper() == "C":
         print("Correct!\n")
@@ -118,7 +118,7 @@ def play_quiz():
     # question 8
     print("Where is the vomeronasal (or Jacobson’s) organ located?")
     answer8 = input(
-        "A in its mouth \nB in its chest \nC in its tail \nAnswer: "
+        "A in its mouth \nB in its chest \nC in its tail \nAnswer: \n"
         ).strip()
     if answer8.upper() == "A":
         print("Correct!\n")
@@ -134,7 +134,7 @@ def play_quiz():
     # question 9
     print("Which snake with the world’s deadliest venom?")
     answer9 = input(
-        "A king cobra \nB python \nC inland taipan \nAnswer: "
+        "A king cobra \nB python \nC inland taipan \nAnswer: \n"
         ).strip()
     if answer9.upper() == "C":
         print("Correct!\n")
@@ -152,7 +152,7 @@ def play_quiz():
     # question 10
     print("What is the longest venomous snake in the world?")
     answer10 = input(
-        "A king cobra \nB python \nC inland taipan \nAnswer: "
+        "A king cobra \nB python \nC inland taipan \nAnswer: \n"
         ).strip()
     if answer10.upper() == "A":
         print("Correct!\n")
@@ -169,7 +169,7 @@ def play_quiz():
     print("had attained a length of 5.71m by autumn 1939.\n")
 
     # final message with score
-    # Display the final score in % to the player
+    # Display the final score to the player
 
     print("You got " + str(score) + " out of 10 correct!\n")
     if score <= 4:
@@ -178,6 +178,6 @@ def play_quiz():
     elif score > 4 <= 7:
         print("You did great!\n")
         return score
-    else: # why is this part of the code doesn't work
+    else:  # why is this part of the code doesn't work
         print("You did awesome job!\n")
         return score

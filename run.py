@@ -22,7 +22,7 @@ SHEET = GSPREAD_CLIENT.open('pp3-snakequiz')
 # Welcome message
 print("Welcome to Snakequiz!!!\n")
 print("Test your snake knowledge with this 10 questions quiz.")
-print("To start play, just enter your name and let's roll.\n")
+print("To start play, just enter your name and let's roll.")
 
 
 def game_menu():
@@ -30,12 +30,13 @@ def game_menu():
     Give player 5 different options to choose from: play, quit,
     restart, score board or my last 4 scores
     """
+    print("\n")
     print("Press 1 - 5 to choose from below options:")
     print("1. Play \n2. Quit \n3. Restart \n4. Score board")
     print("5. My last 4 scores")
 
     while True:
-        game_choice = input("What would you like to do? ").strip()
+        game_choice = input("What would you like to do? \n").strip()
         print("\n")
 
         if game_choice == "1":
@@ -68,16 +69,16 @@ def get_player_name():
         print("Maximum of 8 characters.")
         print("Any white space will be removed.\n")
 
-        player_name = input("Please enter your name: ")
+        player_name = input("Please enter your name: \n")
 
         if check_player_name(player_name):
             print("\n")
             print(f"Hi {player_name}, let's begin the quiz!!\n")
-            quiz.play_quiz()
+            # quiz.play_quiz()
             data = quiz.play_quiz()
-            update_score_worksheet(data, player_name)
-            print(data)
-            print("this is from get player name function")
+            update_score_worksheet(player_name, data)
+            # print(data)
+            # print("this is from get player name function")
             game_menu()
 
     check_player_name(player_name)
@@ -105,24 +106,26 @@ def check_player_name(player_name):
     return True
 
 
-def restart_game():
-    """
-    allow player to play the game multiple times
-    """
-    quiz.play_quiz()
-
-
-def update_score_worksheet(data, player_name):
+def update_score_worksheet(player_name, data):
     """
     update score of each player by add new data
     """
     print("Updating the score...\n")
     score_worksheet = SHEET.worksheet("score_list")
-    print(data)
-    print("this is from update function")    
-    print("until here is working")
+    # print(data)
+    # print("this is from update function")
     score_worksheet.append_row([player_name, data])
     print("Score updated successfully.\n")
+
+
+def restart_game():
+    """
+    allow player to play the game multiple times
+    """
+    # quiz.play_quiz()
+    data = quiz.play_quiz()
+    update_score_worksheet(data)
+    game_menu()
 
 
 def main():
@@ -134,6 +137,3 @@ def main():
 
 
 main()
-data = quiz.play_quiz()
-score = [int(num) for num in data]
-update_sales_worksheet(score)
