@@ -175,7 +175,11 @@ def play_quiz():
     print("You got " + str((score / 10) * 100) + "% correct!\n")
     if score <= 4:
         print("You could do better, try again!\n")
+        return score
     elif score > 4 < 7:
         print("You did great!\n")
+        return score
     else:
         print("You did awesome job!\n")
+        return score
+

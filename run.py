@@ -71,11 +71,12 @@ def get_player_name():
         player_name = input("Please enter your name: ")
 
         if check_player_name(player_name):
-            update_score_worksheet(player_name)
-
             print("\n")
             print(f"Hi {player_name}, let's begin the quiz!!\n")
             quiz.play_quiz()
+            data = quiz.play_quiz()
+            update_score_worksheet(data, player_name)
+            print(data)
             game_menu()
 
     check_player_name(player_name)
@@ -110,13 +111,14 @@ def restart_game():
     quiz.play_quiz()
 
 
-def update_score_worksheet(data):
+def update_score_worksheet(data, player_name):
     """
     update score of each player by add new data
     """
     print("Updating the score...\n")
     score_worksheet = SHEET.worksheet("score")
-    score_worksheet.append_row(data)
+    print(data)
+    score_worksheet.append_row([data])
     print("Score updated successfully.\n")
 
 
@@ -126,5 +128,6 @@ def main():
     """
     game_menu()
     get_player_name()
+
 
 main()
