@@ -77,6 +77,7 @@ def get_player_name():
             data = quiz.play_quiz()
             update_score_worksheet(data, player_name)
             print(data)
+            print("this is from get player name function")
             game_menu()
 
     check_player_name(player_name)
@@ -116,8 +117,10 @@ def update_score_worksheet(data, player_name):
     update score of each player by add new data
     """
     print("Updating the score...\n")
-    score_worksheet = SHEET.worksheet("score")
+    score_worksheet = SHEET.worksheet("score_list")
     print(data)
+    print("this is from update function")    
+    print("until here is working")
     score_worksheet.append_row([data])
     print("Score updated successfully.\n")
 

@@ -8,9 +8,8 @@ def play_quiz():
     after each question, regardless of the player's answer for educational
     purposes.
     """
-
     score = 0
-
+    
     # question 1
     answered = False
     while (not answered):
@@ -176,10 +175,9 @@ def play_quiz():
     if score <= 4:
         print("You could do better, try again!\n")
         return score
-    elif score > 4 < 7:
+    elif score > 4 <= 7:
         print("You did great!\n")
         return score
-    else:
+    else: # why is this part of the code doesn't work
         print("You did awesome job!\n")
         return score
-
