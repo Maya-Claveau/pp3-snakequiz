@@ -116,7 +116,7 @@ def update_score_worksheet(player_name, data):
     # print(data)
     # print("this is from update function")
     # datetime object containing current date and time
-    
+
     now = datetime.now()
 
     # dd/mm/YY H:M:S
@@ -131,9 +131,9 @@ def restart_game():
     allow player to play the game multiple times
     """
     # quiz.play_quiz()
-    # data = quiz.play_quiz()
-    data = 0
-    update_score_worksheet(data)
+    data = quiz.play_quiz()
+    score_worksheet = SHEET.worksheet("score_list")
+    score_worksheet.append_row([data])
     game_menu()
 
 
