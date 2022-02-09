@@ -2,10 +2,10 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+from datetime import datetime
 import gspread
 from google.oauth2.service_account import Credentials
 import quiz
-from datetime import datetime
 
 
 SCOPE = [
@@ -50,8 +50,9 @@ def game_menu():
             print("How nice you want to play again!\n")
             restart_game()
         elif game_choice == "4":
-            print("Here are the top 10 players!")
             # need add code to get data from Gsheet, and display option 1 and 2
+            display_top_10_scores()
+            game_menu()
         elif game_choice == "5":
             print("Here are your last 4 scores!")
             # need code to get data from Gsheet, about player's scores
@@ -135,6 +136,22 @@ def restart_game():
     score_worksheet = SHEET.worksheet("score_list")
     score_worksheet.append_row([data])
     game_menu()
+
+
+def display_top_10_scores():
+    """
+    display top 10 highest score to the player, data
+    fethed from google sheet
+    """
+    file = open("score_list.csv", "r")
+    read_the_file = file.readlines()
+    sorted_data = sorted(read_the_file, reverse=True)
+
+    print("Top 10 Scores!")
+    print("Pos\tName\t Score\t Date")
+
+    for line in range(10):
+        print(str(line+1) + "\t" + str(sorted_data[line]))
 
 
 def main():
