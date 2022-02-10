@@ -28,13 +28,12 @@ print("To start play, just enter your name and let's roll.")
 
 def game_menu():
     """
-    Give player 5 different options to choose from: play, quit,
-    restart, score board or my last 4 scores
+    Give player 4 different options to choose from: play, quit,
+    restart, or score board
     """
     print("\n")
     print("Press 1 - 5 to choose from below options:")
     print("1. Play \n2. Quit \n3. Restart \n4. Score board")
-    print("5. My last 4 scores")
 
     while True:
         game_choice = input("What would you like to do? \n").strip()
@@ -50,14 +49,10 @@ def game_menu():
             print("How nice you want to play again!\n")
             restart_game()
         elif game_choice == "4":
-            # need add code to get data from Gsheet, and display option 1 and 2
             display_top_10_scores()
             game_menu()
-        elif game_choice == "5":
-            print("Here are your last 4 scores!")
-            display_my_last_4_scores()
         else:
-            print("Invalid input, please choose between 1 - 5")
+            print("Invalid input, please choose between 1 - 4")
 
 
 def get_player_name():
@@ -144,38 +139,18 @@ def display_top_10_scores():
     display top 10 highest score to the player, data
     fetched from google sheet via API
     """
-    records_score_data = SHEET.worksheet("score_list").get_all_values()[1:]  # remove from the array (if the end, then :1) [start, stop, step] 
-    
+    records_score_data = SHEET.worksheet("score_list").get_all_values()[1:]
+
     for data_set in records_score_data:
-        data_set[0] = int(data_set[0]) 
-    
+        data_set[0] = int(data_set[0])
+
     sorted_data = sorted(records_score_data, reverse=True)
 
     print("Top 10 Scores!")
     print("Pos\tScore \tName \t Time Stamp")
-    print(type(sorted_data[0][0]))
 
     for line in range(10):
         print(str(line) + "\t" + str(sorted_data[line]))
-    
-
-
-def display_my_last_4_scores():
-    """
-    display a player's last 4 scores, data
-    fetched from google sheet via API
-    """
-    records_score_data = SHEET.worksheet("score_list").get_all_values()
-    player_last_4_records = records_score_data[2]    
-    sorted_data = sorted(player_last_4_records)
-    print("until here it works")
-    # player_name_in_record = input("Please enter your name: ").strip()
-    # print("until here it works 2")
-    print("Pos\tScore \tName \t Time Stamp")
-
-    for line in range(4):
-        print(str(line+1) + "\t" + str(sorted_data[line+1]))
-    print("until here it works 3")
 
 
 def main():
