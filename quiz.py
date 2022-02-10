@@ -96,7 +96,7 @@ def play_quiz():
             break
         else:
             print("Invalid input!! Please choose between 'A' 'B' or 'C'\n")
-    
+
     print("Interesting facts: ")
     print("According to the World Health Organization (WHO), out of 600 +")
     print("venomous species, over 200 are considered to be medically")

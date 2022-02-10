@@ -55,7 +55,7 @@ def game_menu():
             game_menu()
         elif game_choice == "5":
             print("Here are your last 4 scores!")
-            # need code to get data from Gsheet, about player's scores
+            display_my_last_4_scores()
         else:
             print("Invalid input, please choose between 1 - 5")
 
@@ -142,7 +142,7 @@ def restart_game():
 def display_top_10_scores():
     """
     display top 10 highest score to the player, data
-    fethed from google sheet
+    fetched from google sheet via API
     """
     records_score_data = SHEET.worksheet("score_list").get_all_values()
     sorted_data = sorted(records_score_data, reverse=True)
@@ -152,6 +152,24 @@ def display_top_10_scores():
 
     for line in range(10):
         print(str(line+1) + "\t" + str(sorted_data[line+1]))
+
+
+def display_my_last_4_scores():
+    """
+    display a player's last 4 scores, data
+    fetched from google sheet via API
+    """
+    records_score_data = SHEET.worksheet("score_list").get_all_values()
+    player_last_4_records = records_score_data[2]
+    sorted_data = sorted(player_last_4_records)
+    print("until here it works")
+    # player_name_in_record = input("Please enter your name: ").strip()
+    # print("until here it works 2")
+    print("Pos\tScore \tName \t Time Stamp")
+
+    for line in range(4):
+        print(str(line+1) + "\t" + str(sorted_data[line+1]))
+    print("until here it works 3")
 
 
 def main():
