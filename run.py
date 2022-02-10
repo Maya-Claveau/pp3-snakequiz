@@ -144,14 +144,20 @@ def display_top_10_scores():
     display top 10 highest score to the player, data
     fetched from google sheet via API
     """
-    records_score_data = SHEET.worksheet("score_list").get_all_values()
+    records_score_data = SHEET.worksheet("score_list").get_all_values()[1:]  # remove from the array (if the end, then :1) [start, stop, step] 
+    
+    for data_set in records_score_data:
+        data_set[0] = int(data_set[0]) 
+    
     sorted_data = sorted(records_score_data, reverse=True)
 
     print("Top 10 Scores!")
     print("Pos\tScore \tName \t Time Stamp")
+    print(type(sorted_data[0][0]))
 
     for line in range(10):
-        print(str(line+1) + "\t" + str(sorted_data[line+1]))
+        print(str(line) + "\t" + str(sorted_data[line]))
+    
 
 
 def display_my_last_4_scores():
@@ -160,7 +166,7 @@ def display_my_last_4_scores():
     fetched from google sheet via API
     """
     records_score_data = SHEET.worksheet("score_list").get_all_values()
-    player_last_4_records = records_score_data[2]
+    player_last_4_records = records_score_data[2]    
     sorted_data = sorted(player_last_4_records)
     print("until here it works")
     # player_name_in_record = input("Please enter your name: ").strip()
