@@ -4,6 +4,7 @@
 
 from datetime import datetime
 import gspread
+import pandas as pd
 from google.oauth2.service_account import Credentials
 import quiz
 
@@ -78,7 +79,7 @@ def get_player_name():
             print(f"Hi {player_name}, let's begin the quiz!!\n")
             # quiz.play_quiz()
             data = quiz.play_quiz()
-            update_score_worksheet(player_name, data)
+            update_score_worksheet(data, player_name)
             # print(data)
             # print("this is from get player name function")
             game_menu()
@@ -108,7 +109,7 @@ def check_player_name(player_name):
     return True
 
 
-def update_score_worksheet(player_name, data):
+def update_score_worksheet(data, player_name,):
     """
     update score of each player by add new data
     """
@@ -123,7 +124,7 @@ def update_score_worksheet(player_name, data):
     # dd/mm/YY H:M:S
     dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
-    score_worksheet.append_row([player_name, data, dt_string])
+    score_worksheet.append_row([data, player_name, dt_string])
     print("Score updated successfully.\n")
 
 
@@ -143,9 +144,13 @@ def display_top_10_scores():
     display top 10 highest score to the player, data
     fethed from google sheet
     """
-    file = open("score_list.csv", "r")
-    read_the_file = file.readlines()
-    sorted_data = sorted(read_the_file, reverse=True)
+    # score_worksheet = SHEET.worksheet("score_list")
+    # sheet = client.open('commentary data')
+    # client = gspread.authorize(CREDS)
+    score_sheet = SHEET.get_worksheet(0)
+    records_score_data = score_sheet.get_all_records()
+    print(records_score_data)
+    sorted_data = sorted(records_score_data, reverse=True)
 
     print("Top 10 Scores!")
     print("Pos\tName\t Score\t Date")
