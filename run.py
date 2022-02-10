@@ -147,16 +147,18 @@ def display_top_10_scores():
     # score_worksheet = SHEET.worksheet("score_list")
     # sheet = client.open('commentary data')
     # client = gspread.authorize(CREDS)
-    score_sheet = SHEET.get_worksheet(0)
-    records_score_data = score_sheet.get_all_records()
-    print(records_score_data)
-    sorted_data = sorted(records_score_data, reverse=True)
+    # score_sheet = SHEET.get_worksheet(0)
+    records_score_data = SHEET.worksheet("score_list").get_all_values()
+    # print(records_score_data)
+    # sorted_data = sorted(records_score_data, reverse=True)
 
     print("Top 10 Scores!")
     print("Pos\tName\t Score\t Date")
 
-    for line in range(10):
-        print(str(line+1) + "\t" + str(sorted_data[line]))
+    records_df = pd.DataFrame.from_dict(records_score_data)
+    print(records_df.nlargest(10, ["score"])
+    # for line in range(10):
+    #     print(str(line+1) + "\t" + str(sorted_data[line]))
 
 
 def main():
