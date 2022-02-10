@@ -172,6 +172,7 @@ def play_quiz():
     # Display the final score to the player
 
     print("You got " + str(score) + " out of 10 correct!\n")
+
     if score <= 4:
         print("You could do better, try again!\n")
         return score

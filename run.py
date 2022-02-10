@@ -72,16 +72,18 @@ def get_player_name():
         print("Maximum of 8 characters.")
         print("Any white space will be removed.\n")
 
+        now = datetime.now()
+
+        # dd/mm/YY H:M:S
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
         player_name = input("Please enter your name: \n")
 
         if check_player_name(player_name):
             print("\n")
             print(f"Hi {player_name}, let's begin the quiz!!\n")
-            # quiz.play_quiz()
             data = quiz.play_quiz()
-            update_score_worksheet(data, player_name)
-            # print(data)
-            # print("this is from get player name function")
+            update_score_worksheet(data, player_name, dt_string)
             game_menu()
 
     check_player_name(player_name)
@@ -109,15 +111,12 @@ def check_player_name(player_name):
     return True
 
 
-def update_score_worksheet(data, player_name,):
+def update_score_worksheet(data, player_name, dt_string):
     """
     update score of each player by add new data
     """
     print("Updating the score...\n")
     score_worksheet = SHEET.worksheet("score_list")
-    # print(data)
-    # print("this is from update function")
-    # datetime object containing current date and time
 
     now = datetime.now()
 
@@ -132,11 +131,15 @@ def restart_game():
     """
     allow player to play the game multiple times
     """
-    # quiz.play_quiz()
-    data = quiz.play_quiz()
-    score_worksheet = SHEET.worksheet("score_list")
-    score_worksheet.append_row([data])
-    game_menu()
+    while True:
+        data = quiz.play_quiz()
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        # new_player_name = get_player_name().player_name  # here doesn't work        
+        score_worksheet = SHEET.worksheet("score_list")        
+        score_worksheet.append_row([data, " ", dt_string])
+        print("until here it works")
+        game_menu()
 
 
 def display_top_10_scores():
@@ -144,21 +147,24 @@ def display_top_10_scores():
     display top 10 highest score to the player, data
     fethed from google sheet
     """
-    # score_worksheet = SHEET.worksheet("score_list")
-    # sheet = client.open('commentary data')
-    # client = gspread.authorize(CREDS)
-    # score_sheet = SHEET.get_worksheet(0)
-    records_score_data = SHEET.worksheet("score_list").get_all_values()
+    # # score_sheet = SHEET.get_worksheet(0)
     # print(records_score_data)
-    # sorted_data = sorted(records_score_data, reverse=True)
+    # # sorted_data = sorted(records_score_data, reverse=True)
+
+    # print("Top 10 Scores!")
+    # print("Pos\tName\t Score\t Date")
+
+    # records_df = pd.DataFrame.from_dict(records_score_data)
+    # print(records_score_data.nlargest(10, "Score"))
+
+    records_score_data = SHEET.worksheet("score_list").get_all_values()
+    sorted_data = sorted(records_score_data, reverse=True)    
 
     print("Top 10 Scores!")
-    print("Pos\tName\t Score\t Date")
+    print("Pos\tScore \tName \t Time Stamp")
 
-    records_df = pd.DataFrame.from_dict(records_score_data)
-    print(records_df.nlargest(10, ["score"])
-    # for line in range(10):
-    #     print(str(line+1) + "\t" + str(sorted_data[line]))
+    for line in range(10):
+        print(str(line+1) + "\t" + str(sorted_data[line+1]))
 
 
 def main():
