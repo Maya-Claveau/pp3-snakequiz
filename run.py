@@ -4,7 +4,6 @@
 
 from datetime import datetime
 import gspread
-import pandas as pd
 from google.oauth2.service_account import Credentials
 import quiz
 
@@ -135,10 +134,8 @@ def restart_game():
         data = quiz.play_quiz()
         now = datetime.now()
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-        # new_player_name = get_player_name().player_name  # here doesn't work        
-        score_worksheet = SHEET.worksheet("score_list")        
+        score_worksheet = SHEET.worksheet("score_list")
         score_worksheet.append_row([data, " ", dt_string])
-        print("until here it works")
         game_menu()
 
 
@@ -147,18 +144,8 @@ def display_top_10_scores():
     display top 10 highest score to the player, data
     fethed from google sheet
     """
-    # # score_sheet = SHEET.get_worksheet(0)
-    # print(records_score_data)
-    # # sorted_data = sorted(records_score_data, reverse=True)
-
-    # print("Top 10 Scores!")
-    # print("Pos\tName\t Score\t Date")
-
-    # records_df = pd.DataFrame.from_dict(records_score_data)
-    # print(records_score_data.nlargest(10, "Score"))
-
     records_score_data = SHEET.worksheet("score_list").get_all_values()
-    sorted_data = sorted(records_score_data, reverse=True)    
+    sorted_data = sorted(records_score_data, reverse=True)
 
     print("Top 10 Scores!")
     print("Pos\tScore \tName \t Time Stamp")
