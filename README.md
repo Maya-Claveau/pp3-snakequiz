@@ -30,28 +30,37 @@ Ever wonder about how well do you know about snakes?
 #### Home page:
 Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
 
-<p>First thing you will notice is the welcome message with the title of “SNAKEQUIZ” ASCII in star wars style, because it is cool.</p>
+<p>First thing you will notice is the welcome message with the title of “SNAKEQUIZ” ASCII in star wars style, because it is cool. With some simple instructions of the game below.</p>
 
 <img src="assets/screenshots/live-site-final1.png" width="800">
 
 <br>
 <p>Followed by the Menu with 4 options, allowing the player to choose between start the quiz, quit, restart and Scoreboard. </p>
 
-<img src="assets/screenshots/live-site-final2.png" width="800">
+<img src="assets/screenshots/live-menu.png" width="800">
 
-<p>Menu item 1 Play: when the player chooses the Play option, the system will ask an input for username. There is a validator in place to check player’s input, the game will start only when all the requirements are met.</p>
+<p>Menu item 1 Play: when the player chooses the Play option, the system will ask for an input of the chosen player name. With specified information about what you can use in the player name and the max number of characters. If any character is not a letter or digit, or the length is more than 8 characters, the system will detect it, and trigger an error message to be displayed. The system will keep requesting the player name until a valid answer is received, then the quiz will start.</p>
 
-<img src="assets/screenshots/live-site-final3.png" width="800">
+<img src="assets/screenshots/live-menu1.png" width="800">
+
+Below are the Error Message Examples:
+
+<img src="assets/screenshots/live-playername-validation.png" width="400">
+<img src="assets/screenshots/live-playername-validation2.png" width="400">
+
+<p></p>
+
+<img src="assets/screenshots/live-quiz.png" width="800">
 
 <p>Menu item 2 Quit: when the player chooses the Quit option, the system will display a goodbye message, and end. You need to click on the “Run Program” button on the top of the screen to reactivate the program.</p>
 
-screenshot here
+<img src="assets/screenshots/live-menu2.png" width="800">
 
 <p>Menu item 3 Restart : you would choose this option when you have already played your 1st game, and would like to play again. By choosing this option, the quiz will start straight away without asking you to input username. That is assuming you will not choose this option if you are playing for the first time.</p>
 
-screenshot here
+<img src="assets/screenshots/live-menu3.png" width="800">
 
 <p>Menu item 4 Scoreboard: by choosing this option, the system will display the top 10 player scores of all time in the descending order, with their name and time stamp. Followed by the game menu, so the player can choose their next move.
 </p>
 
-screenshot here
+<img src="assets/screenshots/live-menu4.png" width="800">

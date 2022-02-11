@@ -94,6 +94,11 @@ def get_player_name():
         if check_player_name(player_name):
             print("\n")
             print(f"Hi {player_name}, let's begin the quiz!!\n")
+            print("There are two types of questions in this quiz,")
+            print("Y/N and multiple choices. Enter Y for yes")
+            print("and N for no, or ‘A’ ‘B’ or ‘C’. Letters")
+            print("are not case-sensitive.")
+            print("Good Luck!")
             data = quiz.play_quiz()
             update_score_worksheet(data, player_name, dt_string)
             game_menu()
