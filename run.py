@@ -150,7 +150,7 @@ def display_top_10_scores():
     print("Pos\tScore \tName \t Time Stamp")
 
     for line in range(10):
-        print(str(line) + "\t" + str(sorted_data[line]))
+        print(str(line+1) + "\t" + str(sorted_data[line]))
 
 
 def main():
