@@ -16,10 +16,8 @@ Ever wonder about how well do you know about snakes?
 
 <p>This snake quiz was inspired by my 8 year old who has a fascination about snakes, bugs and reptiles. Personally, I was never a big fan of snakes, mainly scared of them. However, in my son’s eyes, they are cute and beautiful. I guess when you look at those pictures, you could say that:</p>
 
-<img src="assets/screenshots/cutie1.jpg" width="300"> 
-<img src="assets/screenshots/cutie2.jpg" width="300">
-<img src="assets/screenshots/cutie3.jpg" width="300">
-<img src="assets/screenshots/cutie4.jpg" width="300">
+<img src="assets/screenshots/cutie1.jpg" width="300"> <img src="assets/screenshots/cutie2.jpg" width="300">
+<img src="assets/screenshots/cutie3.jpg" width="300"> <img src="assets/screenshots/cutie4.jpg" width="300">
 <img src="assets/screenshots/funny1.jpg" width="600">
 
 <p>Being an encouraging mom I did try to gather all the information out there to satisfy his curious mind. In the process, I ended up learning a fair amount of interesting facts about the creature. So I hope with this game, I could influence other people, and spark interest as well, not only about snakes but about nature in general. </p>
