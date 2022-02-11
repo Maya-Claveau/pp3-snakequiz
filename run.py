@@ -50,7 +50,7 @@ def game_menu():
     restart, or score board
     """
     print("\n")
-    print("Press 1 - 5 to choose from below options:")
+    print("Press 1 - 4 to choose from below options:")
     print("1. Play \n2. Quit \n3. Restart \n4. Scoreboard")
 
     while True:

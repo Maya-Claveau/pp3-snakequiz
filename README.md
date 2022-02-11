@@ -39,6 +39,19 @@ Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
 
 <img src="assets/screenshots/live-site-final2.png" width="800">
 
-<p>Menu item 1 Play: When the player chooses the Play option, the system will ask an input for username. There is a validator in place to check player’s input, the game will start only when all the requirements are met.</p>
+<p>Menu item 1 Play: when the player chooses the Play option, the system will ask an input for username. There is a validator in place to check player’s input, the game will start only when all the requirements are met.</p>
 
 <img src="assets/screenshots/live-site-final3.png" width="800">
+
+<p>Menu item 2 Quit: when the player chooses the Quit option, the system will display a goodbye message, and end. You need to click on the “Run Program” button on the top of the screen to reactivate the program.</p>
+
+screenshot here
+
+<p>Menu item 3 Restart : you would choose this option when you have already played your 1st game, and would like to play again. By choosing this option, the quiz will start straight away without asking you to input username. That is assuming you will not choose this option if you are playing for the first time.</p>
+
+screenshot here
+
+<p>Menu item 4 Scoreboard: by choosing this option, the system will display the top 10 player scores of all time in the descending order, with their name and time stamp. Followed by the game menu, so the player can choose their next move.
+</p>
+
+screenshot here
