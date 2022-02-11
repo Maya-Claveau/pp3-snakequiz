@@ -1,8 +1,34 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Ever wonder about how well do you know about snakes? 
+# Welcome to **[Snakequiz](https://snakequiz-pp3.herokuapp.com/)**, and test your knowledge!
 
-Welcome Maya-Claveau,
+<img src="assets/screenshots/mockup1.png" width="800">
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+<p>This was built with the intention of entertaining the player, as well as education with some interesting facts. Main objectives are:</p>
+
+- to test the player's knowledge about snakes
+- to challenge the players memory 
+- to increase the players's interests and curiousity about snakes 
+- and most importantly to LOVE NATURE
+
+------
+
+## **Why This**
+
+<p>This snake quiz was inspired by my 8 year old who has a fascination about snakes, bugs and reptiles. Personally, I was never a big fan of snakes, mainly scared of them. However, in my son’s eyes, they are cute and beautiful. I guess when you look at those pictures, you could say that:</p>
+
+<img src="assets/screenshots/cutie1.jpg" width="300"> 
+<img src="assets/screenshots/cutie2.jpg" width="300">
+<img src="assets/screenshots/cutie3.jpg" width="300">
+<img src="assets/screenshots/cutie4.jpg" width="300">
+<img src="assets/screenshots/funny1.jpg" width="600">
+
+<p>Being an encouraging mom I did try to gather all the information out there to satisfy his curious mind. In the process, I ended up learning a fair amount of interesting facts about the creature. So I hope with this game, I could influence other people, and spark interest as well, not only about snakes but about nature in general. </p>
+
+------
+
+## **Features:**
+### Existing Features:
+#### Home page:
 
 ## Reminders
 
