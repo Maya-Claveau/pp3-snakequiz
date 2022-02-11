@@ -30,8 +30,15 @@ Ever wonder about how well do you know about snakes?
 #### Home page:
 Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
 
+<p>First thing you will notice is the welcome message with the title of “SNAKEQUIZ” ASCII in star wars style, because it is cool.</p>
+
 <img src="assets/screenshots/live-site-final1.png" width="800">
+
+<br>
+<p>Followed by the Menu with 4 options, allowing the player to choose between start the quiz, quit, restart and Scoreboard. </p>
+
 <img src="assets/screenshots/live-site-final2.png" width="800">
 
-<p>First thing you will notice </p>
+<p>Menu item 1 Play: When the player chooses the Play option, the system will ask an input for username. There is a validator in place to check player’s input, the game will start only when all the requirements are met.</p>
 
+<img src="assets/screenshots/live-site-final3.png" width="800">

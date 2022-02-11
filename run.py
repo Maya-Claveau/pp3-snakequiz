@@ -51,7 +51,7 @@ def game_menu():
     """
     print("\n")
     print("Press 1 - 5 to choose from below options:")
-    print("1. Play \n2. Quit \n3. Restart \n4. Score board")
+    print("1. Play \n2. Quit \n3. Restart \n4. Scoreboard")
 
     while True:
         game_choice = input("What would you like to do? \n").strip()
