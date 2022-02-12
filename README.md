@@ -95,7 +95,7 @@ Below are the Error Message Examples:
 
 <br>
 
-### New Features in the future update:
+### New Features In the Future Update:
 #### Menu Item: **My Last 4 Scores**
 <p>My mentor gave me this idea, so originally I planned for 5 options in the game menu, with the last one to display a single player’s last 4 scores. I thought this feature is nice, because it will allow the players to keep track of their own scores. Unfortunately, I didn’t manage to make it work, and it seems to add a lot of complexity to the game, which with my current skill set is a bit out of reach. Hopefully in the future, as I progress further in the coding journey, I will be able to make it work.</p>
 
@@ -172,9 +172,9 @@ Quiz.py
 
 2 <p>The player name is not unique at the moment</p>
 
-## Deployment
+## **Deployment**
 
-## Credits
+## **Credits**
 
 - Code Institute's [Love Sandwiches project](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/tree/master/05-deployment/01-deployment-part-1)
 
@@ -184,8 +184,8 @@ Quiz.py
 
 - [Stackoverflow](https://stackoverflow.com/) for researching a list of things, [this article](https://www.programiz.com/python-programming/methods/string/isalnum) to learn about isalnum() for checking any characters that are not letter or digit, that I used in the check_player_name function as one of the validator.
 
-## **Acknowledgments **
-My mentor Mr. ADEGBENGA ADEYE for his continuous and structured feedback and support. My project won't be the same without his valuable advice.
+## **Acknowledgments**
+My mentor Mr. ADEGBENGA ADEYE for his continuous and structured feedback and support. My project won't be the same without his valuable advice. 
 
 Tutor support at Code Institute. They are always there when I need help, I am really grateful for that.
 
