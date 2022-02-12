@@ -37,7 +37,7 @@ Ever wonder about how well do you know about snakes?
 
 ------
 
-## **Features:**
+## **Features**
 ### Existing Features:
 #### **Home page**:
 Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
@@ -104,4 +104,33 @@ Below are the Error Message Examples:
 
 #### Game: **Chatbox**
 <p>Inspired by CI’s slack channel, why not have a place that will allow players to chat with each other, learn from each other and inspire one another. Afterall, they share a common interest in snakes.</p>
+
+## **Game Logic**
+### Flowchart
+
+<img src="assets/flowchart-final.png" width="800">
+
+## **Technology Used**
+### **Language**
+<p>This is a command-line application built purely using python as the main programming language</p>
+
+### **Tools**
+- [Github](https://github.com/) for store and version control of the code
+
+- [Gitpod](https://gitpod.io/workspaces) for editing code
+
+- [Heroku](https://heroku.com/) for deployment
+
+- [draw.io](https://app.diagrams.net/) for creating flowchart
+
+- [Patorjk.com](https://patorjk.com/software/taag/#p=display&f=Star%20Wars&t=Type%20Something%20) for creating the cool looking game title at the beginning of the game
+
+- [Lightshot](https://app.prntscr.com/en/index.html) for creating screenshots
+
+
+
+
+
+
+
 
