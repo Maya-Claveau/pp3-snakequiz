@@ -127,6 +127,29 @@ Below are the Error Message Examples:
 
 - [Lightshot](https://app.prntscr.com/en/index.html) for creating screenshots
 
+- [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for generating table of content for README.md file
+
+## **Testing**
+### **Code Validation on PEP8**
+Run.py
+
+<img src="assets/screenshots/pep8-run.png" width="800">
+
+Quiz.py
+
+<img src="assets/screenshots/pep8-quiz.png" width="800">
+
+### Bugs
+
+### Unfixed Bugs
+<p>in the Top 10 player list, if a player played multiple times, and got relatively high scores, the list will display them all. It would be nice to avoid duplicates, and just display someone’s highest scores instead</p>
+
+<img src="assets/screenshots/unfixed-bug1.png" width="800">
+
+## Deployment
+
+## Credits
+## Acknowledgments 
 
 
 

@@ -1,7 +1,3 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 from datetime import datetime
 import gspread
 from google.oauth2.service_account import Credentials
@@ -24,14 +20,14 @@ SHEET = GSPREAD_CLIENT.open('pp3-snakequiz')
 print("Welcome to\n")
 print(
     """
-     _______..__   __.      ___       __  ___  _______ 
+     _______..__   __.      ___       __  ___  _______
     /       ||  \ |  |     /   \     |  |/  / |   ____|
-   |   (----`|   \|  |    /  ^  \    |  '  /  |  |__ 
+   |   (----`|   \|  |    /  ^  \    |  '  /  |  |__
     \   \    |  . `  |   /  /_\  \   |    <   |   __|
-.----)   |   |  |\   |  /  _____  \  |  .  \  |  |____ 
+.----)   |   |  |\   |  /  _____  \  |  .  \  |  |____
 |_______/    |__| \__| /__/     \__\ |__|\__\ |_______|
 
-        ______      __    __   __   ________ 
+        ______      __    __   __   ________
        /  __  \    |  |  |  | |  | |       /
       |  |  |  |   |  |  |  | |  | `---/  /
       |  |  |  |   |  |  |  | |  |    /  /
