@@ -3,8 +3,20 @@ Ever wonder about how well do you know about snakes?
 
 <img src="assets/screenshots/mockup1.png" width="800">
 
+- [**Purpose of the game**](#--purpose-of-the-game--)
+- [**Why This**](#--why-this--)
+- [**Features:**](#--features---)
+  * [Existing Features:](#existing-features-)
+    + [**Home page**:](#--home-page---)
+    + [Menu Item 1 **Play**](#menu-item-1---play--)
+    + [Menu Item 2 **Quit**](#menu-item-2---quit--)
+    + [Menu Item 3 **Restart**](#menu-item-3---restart--)
+    + [Menu Item 4 **Scoreboard**](#menu-item-4---scoreboard--)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## **Purpose of the game**
-<p>This game is aimed to test as well as entertain children and adults who are interested in snakes and want to know more about it. After each question, there is also an interesting fact related to the question that will be displayed, to give the player a bit more in depth information. Main objectives are:</p>
+<p>This game is aimed to test as well as to entertain children and adults who are interested in snakes and want to know more about it. After each question, there is also an interesting fact related to the question that will be displayed, to give the player a bit more in depth information. Main objectives are:</p>
 
 - to test the player's knowledge about snakes
 - to challenge the players memory 
@@ -27,7 +39,7 @@ Ever wonder about how well do you know about snakes?
 
 ## **Features:**
 ### Existing Features:
-#### Home page:
+#### **Home page**:
 Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
 
 <p>First thing you will notice is the welcome message with the title of “SNAKEQUIZ” ASCII in star wars style, because it is cool. With some simple instructions of the game below.</p>
@@ -46,14 +58,14 @@ Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
 
 Below are the Error Message Examples:
 
-<img src="assets/screenshots/live-playername-validation.png" width="400">
-<img src="assets/screenshots/live-playername-validation2.png" width="400">
+<img src="assets/screenshots/live-playername-validation.png" width="800">
+<img src="assets/screenshots/live-playername-validation2.png" width="800">
 
 <p>There are 10 questions in total as indicated at the beginning of the quiz. Mixed with Y/N and multiple choice questions, here will display an instruction about how to answer each type of question.</p>
 
 <img src="assets/screenshots/live-instruction.png" width="800">
 
-<p>Each question will provide the player with feedback if their answer was correct or not. Followed by an interesting fact related to that particular question, to give the player a bit more information for “good to know” purposes.</p>
+<p>Each question will provide the player with feedback whether their answer was correct or not. Followed by an interesting fact related to that particular question, to give the player a bit more information for “good to know” purposes.</p>
 
 <img src="assets/screenshots/live-quiz.png" width="800">
 
@@ -76,7 +88,20 @@ Below are the Error Message Examples:
 <img src="assets/screenshots/live-menu3.png" width="800">
 
 #### Menu Item 4 **Scoreboard**
-<p>By choosing this option, the system will display the top 10 player scores of all time in the descending order, with their name and time stamp. Followed by the game menu, so the player can choose their next move.
+<p>By choosing this option, the system will request the information from the google sheet via API, and display the top 10 player scores of all time in the descending order, with their name and time stamp on the side. Followed by the game menu, so the player can choose their next move.
 </p>
 
 <img src="assets/screenshots/live-menu4.png" width="800">
+
+<br>
+
+### New Features in the future update:
+#### Menu Item: **My Last 4 Scores**
+<p>My mentor gave me this idea, so originally I planned for 5 options in the game menu, with the last one to display a single player’s last 4 scores. I thought this feature is nice, because it will allow the players to keep track of their own scores. Unfortunately, I didn’t manage to make it work, and it seems to add a lot of complexity to the game, which with my current skill set is a bit out of reach. Hopefully in the future, as I progress further in the coding journey, I will be able to make it work.</p>
+
+#### Quiz: **Allow player to add more questions**
+<p>It would be nice to have a feature that allows players to add more questions in the quiz section, to test / share the knowledge with others, to expand the scope.</p>
+
+#### Game: **Chatbox**
+<p>Inspired by CI’s slack channel, why not have a place that will allow players to chat with each other, learn from each other and inspire one another. Afterall, they share a common interest in snakes.</p>
+
