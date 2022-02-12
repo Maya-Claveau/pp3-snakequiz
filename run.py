@@ -126,7 +126,8 @@ def check_player_name(player_name):
 
 def update_score_worksheet(data, player_name, dt_string):
     """
-    update score of each player by add new data
+    update score of each player by add new data to
+    the Google sheet
     """
     print("Updating the score...\n")
     score_worksheet = SHEET.worksheet("score_list")

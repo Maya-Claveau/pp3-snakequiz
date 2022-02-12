@@ -1,7 +1,7 @@
 Ever wonder about how well do you know about snakes? 
 # Welcome to **[Snakequiz](https://snakequiz-pp3.herokuapp.com/)**, and test your knowledge!
 
-<img src="assets/screenshots/mockup1.png" width="800">
+<img src="assets/screenshots/mockup-final.png" width="800">
 
 - [**Purpose of the game**](#--purpose-of-the-game--)
 - [**Why This**](#--why-this--)
@@ -110,6 +110,15 @@ Below are the Error Message Examples:
 
 <img src="assets/flowchart-final.png" width="800">
 
+<br>
+
+## **Data Model**
+[Google sheet](https://docs.google.com/spreadsheets/u/0/) was used to store information like score, player’s name and the time stamp. When the player chooses to see the Top 10 scores, the system will read the whole data from this sheet and display only the highest 10.
+
+<img src="assets/screenshots/gsheet.png" width="800">
+
+<br>
+
 ## **Technology Used**
 ### **Language**
 <p>This is a command-line application built purely using python as the main programming language</p>
@@ -129,6 +138,12 @@ Below are the Error Message Examples:
 
 - [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/) for generating table of content for README.md file
 
+- [techsini.com](https://techsini.com/multi-mockup/index.php) for generating the mock up
+
+- [Google Image](https://www.google.com/search?q=cute+snake&sxsrf=APq-WBtiN9NnHc8YW9Ugr5ZmfkmyOwTAjw:1644681215048&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjdp938wvr1AhUtlYsKHWDdDn8Q_AUoAXoECAIQAw&biw=1920&bih=937&dpr=1) for downloading the cute snakes pictures
+
+<br>
+
 ## **Testing**
 ### **Code Validation on PEP8**
 Run.py
@@ -139,21 +154,36 @@ Quiz.py
 
 <img src="assets/screenshots/pep8-quiz.png" width="800">
 
-### Bugs
-### Fixed Bugs
-- <p>When score is greater than 7, the print statement doesn’t work</p>
-<p>Solution: With my mentor’s help, turns out there was “and” missing</p>
+### **Bugs**
+#### *Fixed Bugs*
+1 <p>When score is greater than 7, the print statement of "You did awesome job!" doesn’t work</p>
+ <p>Solution: With my mentor’s help, turned out the word “and” was missing</p>
 
 <img src="assets/screenshots/fixed-bug1.png" width="800">
 
-### Unfixed Bugs
-<p>In the Top 10 player list, if a player played multiple times, and got relatively high scores, the list will display them all. It would be nice to avoid duplicates, and just display someone’s highest scores instead</p>
+2 <p>Once the quiz starts, it will go to the next question, even the error message displayed.</p>
+<p>Solution: Turned out I forgot the while loop, added them to each question, and the problem was fixed.</p>
 
-<img src="assets/screenshots/unfixed-bug1.png" width="800">
+3 <p>The display_top_10 function was only displaying the records from 9 and below, even if there was a score of 10 in the google sheet.</p>
+<p>Solution: I Joined a call in study_group channel on slack, and with the help of DaveHorrocks_5P, Daisy_mentor, Charlie, and Sensei Bim, it got solved. What I learned in the process was how they debug and look at the problem from different angles. Not to mention how much I admire the intelligence and the positive energy between them. They are always ready to offer help.</p>
+
+#### *Unfixed Bugs*
+1 <p>For menu item 3: **restart**, players can still access it from the beginning of the game. So they can skip the step of creating the player name and start the quiz right away. The system will have their score written in the google sheet, but without any player name as a result.</p>
+
+2 <p>The player name is not unique at the moment</p>
 
 ## Deployment
 
 ## Credits
+
+- I struggled to link quiz.py file to run.py, tried a different approach but none of it worked. Turned to Tutor support, Ger helped to solve the issue within minutes, turns out that I called it in the wrong place.
+
+- Another thing Ger helped me with was the check_player_name function, it didn't work for some reason, turned out that I called the function in the wrong place, again, and there was an argument missing from the function itself.
+
+- The display_top_10_scores function didn’t work, and I tried different things. In the end Mr Suffar’s [video](https://www.youtube.com/watch?v=HRJRq2r7eL8) gave me an idea and I took part of his code, and made it work in mine.
+
+- [Stackoverflow](https://stackoverflow.com/) for researching different things, [this article](https://www.programiz.com/python-programming/methods/string/isalnum) to learn about isalnum() for checking any characters that are not letter or digit, that I used in the check_player_name function as one of the validator.
+
 ## Acknowledgments 
 
 
