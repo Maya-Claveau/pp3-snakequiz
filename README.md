@@ -176,15 +176,24 @@ Quiz.py
 
 ## Credits
 
-- I struggled to link quiz.py file to run.py, tried a different approach but none of it worked. Turned to Tutor support, Ger helped to solve the issue within minutes, turns out that I called it in the wrong place.
+- Code Institute's [Love Sandwiches project](https://github.com/Code-Institute-Solutions/love-sandwiches-p5-sourcecode/tree/master/05-deployment/01-deployment-part-1)
 
-- Another thing Ger helped me with was the check_player_name function, it didn't work for some reason, turned out that I called the function in the wrong place, again, and there was an argument missing from the function itself.
+- Tutor support from Code Institute for helping me out when I got stuck. Special shout out to Ger, who helped me to solve multiple problems that was driving me nuts. 
 
-- The display_top_10_scores function didn’t work, and I tried different things. In the end Mr Suffar’s [video](https://www.youtube.com/watch?v=HRJRq2r7eL8) gave me an idea and I took part of his code, and made it work in mine.
+- The display_top_10_scores function didn’t work properly, and I tried different things. In the end Mr Suffar’s [video](https://www.youtube.com/watch?v=HRJRq2r7eL8) gave me an idea and I took part of his code, and made it work in mine.
 
-- [Stackoverflow](https://stackoverflow.com/) for researching different things, [this article](https://www.programiz.com/python-programming/methods/string/isalnum) to learn about isalnum() for checking any characters that are not letter or digit, that I used in the check_player_name function as one of the validator.
+- [Stackoverflow](https://stackoverflow.com/) for researching a list of things, [this article](https://www.programiz.com/python-programming/methods/string/isalnum) to learn about isalnum() for checking any characters that are not letter or digit, that I used in the check_player_name function as one of the validator.
 
-## Acknowledgments 
+## **Acknowledgments **
+My mentor Mr. ADEGBENGA ADEYE for his continuous and structured feedback and support. My project won't be the same without his valuable advice.
+
+Tutor support at Code Institute. They are always there when I need help, I am really grateful for that.
+
+Fellow students on Slack community for their help and support, it feels nice to learn and grow with them together.
+
+Most importantly, I would like to thank my husband who supported me every step in my coding journey, and my son who inspired me to build this project. 
+
+THANK YOU ALL!!!
 
 
 
