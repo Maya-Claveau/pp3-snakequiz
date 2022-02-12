@@ -140,9 +140,14 @@ Quiz.py
 <img src="assets/screenshots/pep8-quiz.png" width="800">
 
 ### Bugs
+### Fixed Bugs
+- <p>When score is greater than 7, the print statement doesn’t work</p>
+<p>Solution: With my mentor’s help, turns out there was “and” missing</p>
+
+<img src="assets/screenshots/fixed-bug1.png" width="800">
 
 ### Unfixed Bugs
-<p>in the Top 10 player list, if a player played multiple times, and got relatively high scores, the list will display them all. It would be nice to avoid duplicates, and just display someone’s highest scores instead</p>
+<p>In the Top 10 player list, if a player played multiple times, and got relatively high scores, the list will display them all. It would be nice to avoid duplicates, and just display someone’s highest scores instead</p>
 
 <img src="assets/screenshots/unfixed-bug1.png" width="800">
 
