@@ -190,6 +190,8 @@ Quiz.py
 
 2 <p>The player name is not unique at the moment, due to time limit, I didn't manage to fix it. It sure would be a nice thing to have.</p>
 
+<br>
+
 ## **Deployment**
 Heroku
   - Login on the [Heroku](https://id.heroku.com/login) website, [create](https://signup.heroku.com/login) your free account if you don’t have one already.
