@@ -171,6 +171,48 @@ Quiz.py
 2 <p>The player name is not unique at the moment</p>
 
 ## **Deployment**
+Heroku
+  - Login on the [Heroku](https://id.heroku.com/login) website, [create](https://signup.heroku.com/login) your free account if you don’t have one already.
+  
+  <img src="assets/screenshots/heroku-signup.png" width="800">
+
+- On your dashboard, click on the **New** button on the top right corner, and then click on **Create new app** as shown below
+
+<img src="assets/screenshots/heroku-newapp.png" width="800">
+
+- Next, type in your project name, it has to be unique, then choose your region and click on **Create App**
+
+<img src="assets/screenshots/heroku-appname.png" width="800">
+
+- You will come to the next screen, and we will set the **Settings** first and then **Deploy**
+
+<img src="assets/screenshots/heroku-ds.png" width="800">
+
+- In the **Settings**, first you will set two Config Vars, one is our CREDS.json file, and another is to set the PORT to 8000 as shown below
+
+<img src="assets/screenshots/heroku-settings.png" width="800">
+
+- Then you will scroll down and add two buildpacks in the **Settings**, first **python** and second **nodejs**. Be aware of the order of these two, it has to be exactly like this, otherwise it will cause problems when we deploy the project.
+
+<img src="assets/screenshots/heroku-buildpacks.png" width="800">
+
+- That's all the settings we need to do. Now let's go to the **Deploy** tab. In the deployment method, I connected my Github, for this project. 
+
+<img src="assets/screenshots/heroku-deploy-method.png" width="800">
+
+- At the bottom of the page, choose **Manual deploy** and then click on **Deploy Branch** button
+
+<img src="assets/screenshots/heroku-manuald.png" width="800">
+
+- The deployment process will start, and it will take a few minutes
+
+<img src="assets/screenshots/heroku-deploying.png" width="800">
+
+- When the deployment has completed, it will display **Your app was successfully deployed** with a **View** button below the message, that will take you to your deployed site.
+
+<img src="assets/screenshots/heroku-d-success.png" width="800">
+
+<br>
 
 ## **Credits**
 
@@ -178,7 +220,7 @@ Quiz.py
 
 - Tutor support from Code Institute for helping me out when I got stuck. Special shout out to Ger, who helped me to solve multiple problems that was driving me nuts. 
 
-- The display_top_10_scores function didn’t work properly, and I tried different things. In the end Mr Suffar’s [video](https://www.youtube.com/watch?v=HRJRq2r7eL8) gave me an idea and I took part of his code, and made it work in mine.
+- The display_top_10_scores function didn’t work properly, and I tried different things. In the end Mr Suffar’s [video](https://www.youtube.com/watch?v=HRJRq2r7eL8) gave me an idea and I took part of his code, and modified it to work in mine.
 
 - [Stackoverflow](https://stackoverflow.com/) for researching a list of things, [this article](https://www.programiz.com/python-programming/methods/string/isalnum) to learn about isalnum() for checking any characters that are not letter or digit, that I used in the check_player_name function as one of the validator.
 
@@ -197,7 +239,7 @@ My mentor Mr. ADEGBENGA ADEYE for his continuous and structured feedback and sup
 
 Tutor support at Code Institute. They are always there when I need help, I am really grateful for that.
 
-Fellow students on Slack community for their help and support, it feels nice to learn and grow with them together.
+Fellow students on the Slack community for their help and support, this amazing community constantly inspires me and it feels nice to learn and grow with them together.
 
 Most importantly, I would like to thank my husband who supported me every step in my coding journey, and my son who inspired me to build this project. 
 
