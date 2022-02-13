@@ -254,10 +254,10 @@ Heroku
   - Question 9 [safarisafricana.com](https://safarisafricana.com/most-venomous-snakes/)
   - Question 10 [guinnessworldrecords.com](https://www.guinnessworldrecords.com/world-records/70265-longest-venomous-snake)
 
-
+<br>
 
 ## **Acknowledgments**
-My mentor Mr. ADEGBENGA ADEYE for his continuous and structured feedback and support. My project won't be the same without his valuable advice. 
+My mentor Mr. ADEGBENGA ADEYE for his continuous structured feedback and support. My project won't be the same without his valuable advice. 
 
 Tutor support at Code Institute. They are always there when I need help, I am really grateful for that.
 
