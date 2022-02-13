@@ -40,14 +40,12 @@ Ever wonder about how well do you know about snakes?
 ## **Features**
 ### Existing Features:
 #### **Home page**:
-Here is the **[live site:](https://snakequiz-pp3.herokuapp.com/)**
-
-<p>First thing you will notice is the welcome message with the title of “SNAKEQUIZ” ASCII in star wars style, because it is cool. With some simple instructions of the game below.</p>
+Once you are on the **[live site](https://snakequiz-pp3.herokuapp.com/)** first thing you will notice is the welcome message with the title of “SNAKEQUIZ” ASCII in star wars style, because it is cool. And some simple instructions of the game below.
 
 <img src="assets/screenshots/live-site-final1.png" width="800">
 
 <br>
-<p>Followed by the Menu with 4 options, allowing the player to choose between start the quiz, quit, restart and Scoreboard. </p>
+<p>Followed by the game menu with 4 options, allowing the player to choose between start the quiz, quit, restart and display the Scoreboard. </p>
 
 <img src="assets/screenshots/live-menu.png" width="800">
 
@@ -121,7 +119,7 @@ Below are the Error Message Examples:
 
 ## **Technology Used**
 ### **Language**
-<p>This is a command-line application built purely using python as the main programming language</p>
+This is a command-line application built purely using **python** as the main programming language
 
 ### **Tools**
 - [Github](https://github.com/) for store and version control of the code
@@ -183,6 +181,16 @@ Quiz.py
 - The display_top_10_scores function didn’t work properly, and I tried different things. In the end Mr Suffar’s [video](https://www.youtube.com/watch?v=HRJRq2r7eL8) gave me an idea and I took part of his code, and made it work in mine.
 
 - [Stackoverflow](https://stackoverflow.com/) for researching a list of things, [this article](https://www.programiz.com/python-programming/methods/string/isalnum) to learn about isalnum() for checking any characters that are not letter or digit, that I used in the check_player_name function as one of the validator.
+
+- The Interesting facts content came from the sources below:
+  - Question 1 [reptilesmagazine.com](https://reptilesmagazine.com/snake-cardiovascular-system-anatomy/)
+  - Question 2 [biomedicalsciences.unimelb.edu.au](https://biomedicalsciences.unimelb.edu.au/departments/department-of-biochemistry-and-pharmacology/engage/avru/blog/sneaky-snake-facts#:~:text=As%20snakes%20are%20so%20flexible,even%20more%20than%20us%20humans.&text=Snakes%20belong%20to%20the%20vertebrates,mammals%2C%20birds%2C%20and%20fish.)
+  - Question 3-7 [nationalgeographic.com](https://www.nationalgeographic.com/animals/reptiles/facts/snakes-1)
+  - Question 8 [elementalscience.com](https://elementalscience.com/blogs/science-activities/how-do-snakes-smell-the-jacobson-organ#:~:text=The%20Jacobson%20organ%20is%20found,the%20tips%20of%20the%20fork.)
+  - Question 9 [safarisafricana.com](https://safarisafricana.com/most-venomous-snakes/)
+  - Question 10 [guinnessworldrecords.com](https://www.guinnessworldrecords.com/world-records/70265-longest-venomous-snake)
+
+
 
 ## **Acknowledgments**
 My mentor Mr. ADEGBENGA ADEYE for his continuous and structured feedback and support. My project won't be the same without his valuable advice. 
