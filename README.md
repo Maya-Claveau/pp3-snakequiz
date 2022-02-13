@@ -5,15 +5,31 @@ Ever wonder about how well do you know about snakes?
 
 - [**Purpose of the game**](#--purpose-of-the-game--)
 - [**Why This**](#--why-this--)
-- [**Features:**](#--features---)
+- [**Features**](#--features--)
   * [Existing Features:](#existing-features-)
     + [**Home page**:](#--home-page---)
     + [Menu Item 1 **Play**](#menu-item-1---play--)
     + [Menu Item 2 **Quit**](#menu-item-2---quit--)
     + [Menu Item 3 **Restart**](#menu-item-3---restart--)
     + [Menu Item 4 **Scoreboard**](#menu-item-4---scoreboard--)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+  * [New Features In the Future Update:](#new-features-in-the-future-update-)
+    + [Menu Item: **My Last 4 Scores**](#menu-item----my-last-4-scores--)
+    + [Quiz: **Allow player to add more questions**](#quiz----allow-player-to-add-more-questions--)
+    + [Game: **Chatbox**](#game----chatbox--)
+- [**Game Logic**](#--game-logic--)
+  * [Flowchart](#flowchart)
+- [**Data Model**](#--data-model--)
+- [**Technology Used**](#--technology-used--)
+  * [**Language**](#--language--)
+  * [**Tools**](#--tools--)
+- [**Testing**](#--testing--)
+  * [**Code Validation on PEP8**](#--code-validation-on-pep8--)
+  * [**Bugs**](#--bugs--)
+    + [*Fixed Bugs*](#-fixed-bugs-)
+    + [*Unfixed Bugs*](#-unfixed-bugs-)
+- [**Deployment**](#--deployment--)
+- [**Credits**](#--credits--)
+- [**Acknowledgments**](#--acknowledgments--)
 
 ## **Purpose of the game**
 <p>This game is aimed to test as well as to entertain children and adults who are interested in snakes and want to know more about it. After each question, there is also an interesting fact related to the question that will be displayed, to give the player a bit more in depth information. Main objectives are:</p>
