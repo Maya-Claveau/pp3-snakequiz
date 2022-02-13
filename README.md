@@ -114,7 +114,7 @@ Below are the Error Message Examples:
 <p>My mentor gave me this idea, so originally I planned for 5 options in the game menu, with the last one to display a single player’s last 4 scores. I thought this feature is nice, because it will allow the players to keep track of their own scores. Unfortunately, I didn’t manage to make it work, and it seems to add a lot of complexity to the game, which with my current skill set is a bit out of reach. Hopefully in the future, as I progress further in the coding journey, I will be able to make it work.</p>
 
 #### Quiz: **Allow player to add more questions**
-<p>It would be nice to have a feature that allows players to add more questions in the quiz section, to test / share the knowledge with others, to expand the scope.</p>
+<p>It would be nice to have a feature that allows players to add more questions in the quiz section, to test / share the knowledge with others, to expand the scope. And also, it would be nice if the question can be rotated randomly each time it runs.</p>
 
 #### Game: **Chatbox**
 <p>Inspired by CI’s slack channel, why not have a place that will allow players to chat with each other, learn from each other and inspire one another. Afterall, they share a common interest in snakes.</p>
@@ -184,7 +184,7 @@ Quiz.py
 #### *Unfixed Bugs*
 1 <p>For menu item 3: **restart**, players can still access it from the beginning of the game. So they can skip the step of creating the player name and start the quiz right away. The system will have their score written in the google sheet, but without any player name as a result.</p>
 
-2 <p>The player name is not unique at the moment</p>
+2 <p>The player name is not unique at the moment, due to time limit, I didn't manage to fix it. It sure would be a nice thing to have.</p>
 
 ## **Deployment**
 Heroku
