@@ -156,6 +156,10 @@ This is a command-line application built purely using **python** as the main pro
 
 - [Google Image](https://www.google.com/search?q=cute+snake&sxsrf=APq-WBtiN9NnHc8YW9Ugr5ZmfkmyOwTAjw:1644681215048&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjdp938wvr1AhUtlYsKHWDdDn8Q_AUoAXoECAIQAw&biw=1920&bih=937&dpr=1) for downloading the cute snakes pictures
 
+- [Google sheet](https://docs.google.com/spreadsheets/u/0/) was used to store data
+
+- [Google cloud platform](https://console.cloud.google.com/) for connecting google sheet via API
+
 <br>
 
 ## **Testing**
